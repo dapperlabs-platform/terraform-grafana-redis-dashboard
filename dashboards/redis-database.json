@@ -23,6 +23,18 @@
     "graphTooltip": 1,
     "id": 707,
     "iteration": 1639604934016,
+    "links": [
+      {
+        "icon": "external link",
+        "includeVars": true,
+        "keepTime": true,
+        "tags": [
+          "${PRODUCT_REPLACE}-${ENVIRONMENT_REPLACE}"
+        ],
+        "targetBlank": false,
+        "type": "dashboards"
+      }
+    ],
     "liveNow": false,
     "panels": [
       {
@@ -4902,7 +4914,8 @@
         "sre",
         "redis",
         "${PRODUCT_REPLACE}",
-        "${ENVIRONMENT_REPLACE}"
+        "${ENVIRONMENT_REPLACE}",
+        "${PRODUCT_REPLACE}-${ENVIRONMENT_REPLACE}"
     ],
     "time": {
       "from": "now-1h",
@@ -4934,7 +4947,7 @@
       ]
     },
     "timezone": "utc",
-    "title": "Redis Database (${PRODUCT_REPLACE} ${ENVIRONMENT_REPLACE})",
+    "title": "Redis Database",
     "uid": "${UID_REPLACE}",
     "version": 2,
     "weekStart": ""
