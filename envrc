@@ -1,0 +1,10 @@
+export GRAFANA_AUTH=""
+export GRAFANA_URL=https://dapperlabs.grafana.net
+export TF_VAR_folder_id=""
+export TF_VAR_bdb=""
+export TF_VAR_cluster=""
+export TF_VAR_prom_datasource=""
+export TF_VAR_environment="staging"
+export TF_VAR_product_name=""
+export TF_VAR_notification_channel="" # Unused until we have alerts
+export TF_VAR_service_name="" # Unused until we have alerts
