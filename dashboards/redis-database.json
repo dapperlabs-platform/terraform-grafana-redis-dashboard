@@ -23,18 +23,6 @@
     "graphTooltip": 1,
     "id": 707,
     "iteration": 1639604934016,
-    "links": [
-      {
-        "icon": "external link",
-        "includeVars": true,
-        "keepTime": true,
-        "tags": [
-          "RLEC"
-        ],
-        "targetBlank": true,
-        "type": "dashboards"
-      }
-    ],
     "liveNow": false,
     "panels": [
       {
