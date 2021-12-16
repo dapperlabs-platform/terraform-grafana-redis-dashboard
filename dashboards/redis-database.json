@@ -41,7 +41,7 @@
         "collapsed": false,
         "gridPos": {
           "h": 1,
-          "w": 24,
+          "w": 20,
           "x": 0,
           "y": 0
         },
@@ -49,28 +49,6 @@
         "panels": [],
         "title": "Dashboard Row",
         "type": "row"
-      },
-      {
-        "editable": true,
-        "error": false,
-        "gridPos": {
-          "h": 4,
-          "w": 4,
-          "x": 0,
-          "y": 1
-        },
-        "id": 9,
-        "links": [],
-        "options": {
-          "content": "<b style=\"font-size: 20pt\">$status<b>\n<b style=\"font-size: 20pt\">$newStatus<b>",
-          "mode": "html"
-        },
-        "pluginVersion": "8.3.3",
-        "style": {
-          "font-size": "72pt"
-        },
-        "title": "Status for BDB:${BDB_REPLACE}",
-        "type": "text"
       },
       {
         "datasource": {
@@ -559,7 +537,7 @@
             "step": 2400
           },
           {
-            "expr": "max_over_time(bdb_avg_latency_max{bdb=\"${BDB_REPLACE}\", cluster=\"${CLUSTER_REPLACE}\"}[${AGGREGATION_REPLACE}])",
+            "expr": "max_over_time(bdb_avg_latency_max{bdb=\"${BDB_REPLACE}\", cluster=\"${CLUSTER_REPLACE}\"}[1m])",
             "format": "time_series",
             "interval": "",
             "intervalFactor": 1,
@@ -1010,7 +988,7 @@
             "step": 240
           },
           {
-            "expr": "max_over_time(bdb_total_req_max{cluster=\"${CLUSTER_REPLACE}\",bdb=\"${BDB_REPLACE}\"}[${AGGREGATION_REPLACE}])\n",
+            "expr": "max_over_time(bdb_total_req_max{cluster=\"${CLUSTER_REPLACE}\",bdb=\"${BDB_REPLACE}\"}[1m])\n",
             "format": "time_series",
             "hide": false,
             "interval": "",
@@ -1979,7 +1957,7 @@
         "steppedLine": false,
         "targets": [
           {
-            "expr": "delta(redis_aof_rewrites{cluster=\"${CLUSTER_REPLACE}\", bdb=\"${BDB_REPLACE}\"}[${AGGREGATION_REPLACE}]) !=0",
+            "expr": "delta(redis_aof_rewrites{cluster=\"${CLUSTER_REPLACE}\", bdb=\"${BDB_REPLACE}\"}[1m]) !=0",
             "format": "time_series",
             "intervalFactor": 2,
             "legendFormat": "Redis {{redis}} node {{node}}",
@@ -2824,7 +2802,7 @@
         "steppedLine": false,
         "targets": [
           {
-            "expr": "delta(redis_aof_delayed_fsync{bdb=\"${BDB_REPLACE}\", cluster=\"${CLUSTER_REPLACE}\"}[${AGGREGATION_REPLACE}])",
+            "expr": "delta(redis_aof_delayed_fsync{bdb=\"${BDB_REPLACE}\", cluster=\"${CLUSTER_REPLACE}\"}[1m])",
             "format": "time_series",
             "interval": "",
             "intervalFactor": 2,
@@ -3583,7 +3561,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "sum(delta(redis_wait_busy_key{bdb=\"${BDB_REPLACE}\",cluster=\"${CLUSTER_REPLACE}\"}[${AGGREGATION_REPLACE}]))",
+                "expr": "sum(delta(redis_wait_busy_key{bdb=\"${BDB_REPLACE}\",cluster=\"${CLUSTER_REPLACE}\"}[1m]))",
                 "format": "time_series",
                 "intervalFactor": 2,
                 "legendFormat": "bdb:{{${BDB_REPLACE}}}",
@@ -3658,7 +3636,7 @@
             "steppedLine": false,
             "targets": [
               {
-                "expr": "sum(delta(redis_blocking_reads{bdb=\"${BDB_REPLACE}\",cluster=\"${CLUSTER_REPLACE}\"}[${AGGREGATION_REPLACE}]))",
+                "expr": "sum(delta(redis_blocking_reads{bdb=\"${BDB_REPLACE}\",cluster=\"${CLUSTER_REPLACE}\"}[1m]))",
                 "format": "time_series",
                 "intervalFactor": 2,
                 "legendFormat": "bdb:{{${BDB_REPLACE}}}",
@@ -4875,7 +4853,7 @@
                 "step": 1200
               },
               {
-                "expr": "sum(delta(redis_rocks_flush_writes_slowdown{bdb=\"${BDB_REPLACE}\", cluster=\"${CLUSTER_REPLACE}\"}[${AGGREGATION_REPLACE}]))",
+                "expr": "sum(delta(redis_rocks_flush_writes_slowdown{bdb=\"${BDB_REPLACE}\", cluster=\"${CLUSTER_REPLACE}\"}[1m]))",
                 "format": "time_series",
                 "interval": "",
                 "intervalFactor": 2,
@@ -4885,7 +4863,7 @@
                 "step": 1200
               },
               {
-                "expr": "sum(delta(redis_rocks_flush_writes_stop{bdb=\"${BDB_REPLACE}\", cluster=\"${CLUSTER_REPLACE}\"}[${AGGREGATION_REPLACE}]))",
+                "expr": "sum(delta(redis_rocks_flush_writes_stop{bdb=\"${BDB_REPLACE}\", cluster=\"${CLUSTER_REPLACE}\"}[1m]))",
                 "format": "time_series",
                 "interval": "",
                 "intervalFactor": 2,
