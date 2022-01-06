@@ -43,3 +43,28 @@ variable "service_name" {
   description = "Service Name"
   type        = string
 }
+
+variable "latency_threshold" {
+  description = "Latency Threshold Alert"
+  type        = string
+}
+
+variable "listener_latency_threshold" {
+  description = "Listener Latency Threshold Alert"
+  type        = string
+}
+
+variable "operations_per_second_threshold" {
+  description = "Operations Per Second Threshold Alert"
+  type        = string
+}
+
+variable "cpu_per_shard_threshold" {
+  description = "CPU Usage Per Shard Threshold Alert"
+  type = string
+}
+
+variable "storage_used_threshold" {
+  description = "Storage Used Threshold Alert"
+  type = string
+}
