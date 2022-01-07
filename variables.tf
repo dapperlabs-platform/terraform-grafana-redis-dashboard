@@ -47,24 +47,28 @@ variable "service_name" {
 variable "latency_threshold" {
   description = "Latency Threshold Alert"
   type        = string
+  default     = "2000"
 }
 
 variable "listener_latency_threshold" {
   description = "Listener Latency Threshold Alert"
   type        = string
+  default     = "1000"
 }
 
 variable "operations_per_second_threshold" {
   description = "Operations Per Second Threshold Alert"
   type        = string
+  default     = "5000"
 }
 
 variable "cpu_per_shard_threshold" {
   description = "CPU Usage Per Shard Threshold Alert"
-  type = string
+  type        = string
+  default     = "30"
 }
 
 variable "storage_used_threshold" {
   description = "Storage Used Threshold Alert"
-  type = string
+  type        = string
 }

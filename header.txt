@@ -1,0 +1,33 @@
+# Redis Dashboard
+
+A default dashboard with alerts for Redis.
+
+`make` updates the `README.md` file based on Terraform changes.
+
+## Requires
+
+1. `terraform` [Download](https://www.terraform.io/downloads.html) [Brew](https://formulae.brew.sh/formula/terraform)
+2. `terraform-docs` to update the README. [Download](https://github.com/terraform-docs/terraform-docs) [Brew](https://formulae.brew.sh/formula/terraform-docs)
+3. `make` to update the README. [Download](https://www.gnu.org/software/make/)
+
+## Usage
+
+```terraform
+module "redis_dashboard" {
+    source                  = "https://github.com/dapperlabs-platform/terraform-grafana-redis-dashboard?ref=vX.Y.Z"
+    bdb                     = "12345678"
+    cluster                 = "server.name.goes.here.com"
+    environment             = "production"
+    folder_id               = "123"
+    product_name            = "product"
+    prom_datasource         = "prometheus"
+    notification_channel    = "grafana-UID"
+    service_name            = "product-infrastructure"
+    # Alerting thresholds
+    cpu_per_shard_threshold         = "30"
+    latency_threshold               = "2000"
+    listener_latency_threshold      = "1000"
+    operations_per_second_threshold = "5000"
+    storage_used_threshold          = "26843545600"
+}
+```
