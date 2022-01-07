@@ -14,7 +14,7 @@ A default dashboard with alerts for Redis.
 
 ```terraform
 module "redis_dashboard" {
-    source                  = "https://github.com/dapperlabs-platform/terraform-grafana-redis-dashboard?ref=vX.Y.Z"
+    source                  = "github.com/dapperlabs-platform/terraform-grafana-redis-dashboard.git?ref=vX.Y.Z"
     bdb                     = "12345678"
     cluster                 = "server.name.goes.here.com"
     environment             = "production"
