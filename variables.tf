@@ -72,3 +72,9 @@ variable "storage_used_threshold" {
   description = "Storage Used Threshold Alert"
   type        = string
 }
+
+variable "overwrite_dashboard" {
+  description = "Always overwrite from Terraform"
+  type        = bool
+  default     = true
+}

@@ -2,7 +2,7 @@ terraform {
   required_providers {
     grafana = {
       source  = "grafana/grafana"
-      version = ">= 1.14.0"
+      version = "~> 1.20"
     }
   }
 }
@@ -13,7 +13,8 @@ resource "random_string" "random" {
 }
 
 resource "grafana_dashboard" "redis_database" {
-  folder = var.folder_id
+  folder    = var.folder_id
+  overwrite = var.overwrite_dashboard
 
   config_json = templatefile(
     "${path.module}/dashboards/redis-database.json",
