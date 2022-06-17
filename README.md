@@ -70,6 +70,7 @@ No modules.
 | <a name="input_listener_latency_threshold"></a> [listener\_latency\_threshold](#input\_listener\_latency\_threshold) | Listener Latency Threshold Alert | `string` | `"1000"` | no |
 | <a name="input_notification_channel"></a> [notification\_channel](#input\_notification\_channel) | Notification Channel | `string` | n/a | yes |
 | <a name="input_operations_per_second_threshold"></a> [operations\_per\_second\_threshold](#input\_operations\_per\_second\_threshold) | Operations Per Second Threshold Alert | `string` | `"5000"` | no |
+| <a name="input_overwrite_dashboard"></a> [overwrite\_dashboard](#input\_overwrite\_dashboard) | Always overwrite from Terraform | `bool` | `true` | no |
 | <a name="input_product_name"></a> [product\_name](#input\_product\_name) | Product Name | `string` | n/a | yes |
 | <a name="input_prom_datasource"></a> [prom\_datasource](#input\_prom\_datasource) | Prometheus Datasource | `string` | n/a | yes |
 | <a name="input_service_name"></a> [service\_name](#input\_service\_name) | Service Name | `string` | n/a | yes |

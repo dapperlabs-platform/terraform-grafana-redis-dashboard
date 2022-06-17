@@ -20,7 +20,7 @@ module "redis_dashboard" {
     environment             = "production"
     folder_id               = "123"
     product_name            = "product"
-    prom_datasource         = "prometheus"
+    prom_datasource         = "datasource-UID"
     notification_channel    = "grafana-UID"
     service_name            = "product-infrastructure"
     # Alerting thresholds
