@@ -36,13 +36,13 @@ module "redis_dashboard" {
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_grafana"></a> [grafana](#requirement\_grafana) | >= 1.14.0 |
+| <a name="requirement_grafana"></a> [grafana](#requirement\_grafana) | ~> 1.20 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_grafana"></a> [grafana](#provider\_grafana) | >= 1.14.0 |
+| <a name="provider_grafana"></a> [grafana](#provider\_grafana) | ~> 1.20 |
 | <a name="provider_random"></a> [random](#provider\_random) | n/a |
 
 ## Modules
