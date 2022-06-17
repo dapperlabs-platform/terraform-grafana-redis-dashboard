@@ -13,7 +13,8 @@ resource "random_string" "random" {
 }
 
 resource "grafana_dashboard" "redis_database" {
-  folder = var.folder_id
+  folder    = var.folder_id
+  overwrite = true
 
   config_json = templatefile(
     "${path.module}/dashboards/redis-database.json",
